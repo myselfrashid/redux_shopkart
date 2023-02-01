@@ -10,8 +10,8 @@ const TotalAmount = () => {
       <h1>Total is 0</h1>
     </div>
   ) : (
-    <div className="flex flex-row justify-end xl:mr-96 lg:mr-40 md:mr-4 xs:mr-2 lg:p-20 md:p-10 xs:p-4">
-      <h1 className="text-3xl font-Noto font-bold lg:text-5xl md:text-2xl xs:text-xl">Total : {total}</h1>
+    <div className="flex flex-row justify-end 2xl:mr-96 xl:mr-80 lg:mr-40 md:mr-20 xs:mr-10 lg:p-20 md:p-10 xs:p-4">
+      <h1 className="2xl:text-3xl xl:text-2xl font-Noto font-bold md:text-xl xs:text-xl">Total : {total}</h1>
     </div>
   );
 };

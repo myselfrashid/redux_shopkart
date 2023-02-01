@@ -20,7 +20,7 @@ const Cart = () => {
     </div>
   ) : (
     <div>
-      <h3 className="text-2xl xl:text-4xl text-center font-bold uppercase pt-4">
+      <h3 className="xl:text-xl 2xl:text-4xl text-center font-bold uppercase pt-4">
         Cart: {cartQuantity}
       </h3>
       <div className="flex flex-col justify-center items-center xl:space-y-20 lg:space-y-10">
@@ -32,14 +32,14 @@ const Cart = () => {
             <div className="lg:w-36 md:w-auto">
               <img className="xl:w-48 md:w-28 bg-center" src={item.image} alt={item.title}></img>
             </div>
-            <h3 className="xl:text-2xl 2xl:text-3xl xs:text-lg font-bold xs:font-semibold lg:w-96 md:w-auto xs:text-center md:text-left">
+            <h3 className="xl:text-lg 2xl:text-3xl xs:text-lg font-bold xs:font-semibold lg:w-96 md:w-auto xs:text-center md:text-left">
               {item.title.split("", 25)}
             </h3>
-            <h3 className="lg:w-20 md:w-auto text-center text-lg xl:text-3xl">
+            <h3 className="lg:w-20 md:w-auto text-center text-lg 2xl:text-3xl">
               ₹{Math.ceil(item.price * 81.66)}
             </h3>
             <button
-              className="bg-emerald-600 lg:p-2 md:px-4 md:py-2 xs:px-4 xs:py-2 rounded-lg uppercase font-bold shadow-xl xl:text-2xl"
+              className="bg-emerald-600 lg:p-2 md:px-4 md:py-2 xs:px-4 xs:py-2 rounded-lg uppercase font-bold shadow-xl 2xl:text-2xl"
               onClick={() => {
                 handleRemove(item.id);
               }}
