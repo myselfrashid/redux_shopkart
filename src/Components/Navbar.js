@@ -10,7 +10,7 @@ const Navbar = () => {
   const handleClose = () => setMenu(!menu);
 
   return (
-    <header className="flex justify-between xs:justify-between items-center md:px-4 xs:px-2 xs:w-full py-4 h-16 xs:h-16 bg-black text-white xs:shadow-xl xl:p-10 box-border xs:fixed">
+    <header className="flex justify-between xs:justify-between items-center md:px-4 xs:px-2 xs:w-full py-4 h-16 xs:h-16 bg-black text-white xs:shadow-xl xl:p-10 box-border md:static xs:fixed">
       <div className="2xl:text-3xl xl:text-2xl xs:text-2xl font-bold bg-white text-black p-2 rounded-lg">
         <Link to="/">
           <span className="p-1 xs:p-0">SHOP</span>
