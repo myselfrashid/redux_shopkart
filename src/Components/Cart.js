@@ -41,7 +41,7 @@ const Cart = () => {
               ₹{Math.ceil(item.price * 81.66)}
             </h3>
             <button
-              className="bg-emerald-600 lg:p-2 md:px-4 md:py-2 xs:px-4 xs:py-2 rounded-lg uppercase font-bold shadow-xl 2xl:text-2xl xl:text-xl md:text-lg xs:text-sm text-white"
+              className="bg-emerald-600 lg:p-2 md:px-4 md:py-2 xs:px-4 xs:py-2 rounded-lg uppercase font-bold shadow-xl 2xl:text-2xl xl:text-base md:text-lg xs:text-sm text-white"
               onClick={() => {
                 handleRemove(item.id);
               }}
