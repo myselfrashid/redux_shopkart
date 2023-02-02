@@ -15,7 +15,7 @@ const Cart = () => {
   const cartQuantity = cartItems.length;
 
   return cartQuantity === 0 ? (
-    <div className="flex flex-col p-4 space-y-4 justify-center items-center xs:h-[100%] mt-14">
+    <div className="flex flex-col p-4 space-y-4 justify-center items-center xs:h-[100%] mt-20">
     <h1 className="text-center 2xl:text-6xl xl:text-3xl lg:text-2xl md:text-2xl xs:text-2xl font-bold w-full">Cart is empty :(</h1>
     <p1 className=" 2xl:text-6xl text-center md:text-xl font-semibold xs:text-lg">Looks like you haven't added anything to your cart!</p1>
     <img className="2xl:w-[1048px] lg:w-96 md:w-96 xs:w-56" src={story} alt={"ShoppingCart"}></img>
