@@ -1,24 +1,36 @@
 const { createSlice } = require("@reduxjs/toolkit");
 
-const initialState = [];
+const initialState = {
+  cartItems: [],
+  cartTotalQuantity: 0,
+  cartTotalAmount: 0,
+};
 
 const cartSlice = createSlice({
   name: "cart",
   initialState,
-  quantity:0, 
+  quantity: 0,
   reducers: {
     add(state, action) {
-      let itemInCart = state.find(
-        (product) => product.id === action.payload.id
+      let existingItem = state.cartItems.findIndex(
+        (item) => item.id === action.payload.id
       );
-      if (itemInCart) {
-        itemInCart.quantity++;
+      if (existingItem >= 0) {
+        state.cartItems[existingItem].quantity += 1;
       } else {
-        state.push({ ...action.payload, quantity: 1 });
+        state.cartItems.push({ ...action.payload, quantity: 1 });
       }
     },
     remove(state, action) {
-      return state.filter((item) => item.id !== action.payload);
+      state.cartItems.map((cartItem) => {
+        if (cartItem.id === action.payload.id) {
+          const nextCartItems = state.cartItems.filter(
+            (product) => product.id !== cartItem.id
+          );
+          state.cartItems = nextCartItems;
+        }
+        return state;
+      });
     },
   },
 });

@@ -9,6 +9,7 @@ const Navbar = () => {
   const handleClick = () => setMenu(!menu);
   const handleClose = () => setMenu(!menu);
 
+  const cartQuantity = cartItems.cartItems.length;
   return (
     <header className="flex justify-between xs:justify-between items-center md:px-4 xs:px-2 xs:w-full py-4 h-16 xs:h-16 bg-black text-white xs:shadow-xl xl:p-10 box-border md:static xs:fixed">
       <div className="2xl:text-3xl xl:text-2xl xs:text-2xl font-bold bg-white text-black p-2 rounded-lg">
@@ -24,7 +25,7 @@ const Navbar = () => {
           Home
         </Link>
         <Link className="px-10" to="/cart">
-          Cart: <span>{cartItems.length}</span>
+          Cart: <span>{cartQuantity}</span>
         </Link>
       </div>
       <div
