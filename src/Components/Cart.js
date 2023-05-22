@@ -189,10 +189,10 @@ const Cart = () => {
         </div>
         <div className="flex flex-row justify-between w-full border-t-black border-t-2 border-b-black border-b-2">
           <h1 className="xl:text-xl lg:text-lg md:text-base xs:text-sm lg:w-36 md:w-36 xs:w-60 text-left">
-            Final Price: ₹
+            Final Price: 
           </h1>{" "}
           <span className="font-semibold text-blue-600">
-            {Math.floor(cart.cartTotalAmount) * 83 < 2000
+          ₹{Math.floor(cart.cartTotalAmount) * 83 < 2000
               ? Math.floor(cart.cartTotalAmount) * 83 + 50
               : Math.floor(cart.cartTotalAmount) * 83 -
                 Math.floor(cart.cartTotalAmount * 83) / 10}
