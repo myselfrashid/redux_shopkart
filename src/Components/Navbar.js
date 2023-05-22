@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { MdShoppingCart } from "react-icons/md";
 
 const Navbar = () => {
   const cartItems = useSelector((state) => state.cart);
@@ -11,22 +12,34 @@ const Navbar = () => {
 
   const cartQuantity = cartItems.cartItems.length;
   return (
-    <header className="flex justify-between xs:justify-between items-center md:px-4 xs:px-2 xs:w-full py-4 h-16 xs:h-16 bg-black text-white xs:shadow-xl xl:p-10 box-border md:static xs:fixed">
+    <header className="flex justify-between xs:justify-between items-center md:px-4 xs:px-2 xs:w-full py-4 h-16 xs:h-16 bg-blue-500 text-white xs:shadow-sm xl:p-10 box-border md:static xs:fixed">
       <div className="2xl:text-3xl xl:text-2xl xs:text-2xl font-bold bg-white text-black p-2 rounded-lg">
         <Link to="/">
           <span className="p-1 xs:p-0">SHOP</span>
-          <span className="bg-black text-white p-1 rounded-r-lg pr-2">
+          <span className="bg-blue-600 text-white p-1 rounded-r-lg pr-2">
             KART
           </span>
         </Link>
       </div>
-      <div className="flex flex-row md:px-0 xl:text-xl md:block xs:hidden">
-        <Link to="/" className="px-10">
-          Home
-        </Link>
-        <Link className="px-10" to="/cart">
-          Cart: <span>{cartQuantity}</span>
-        </Link>
+      <div className="lg:flex lg:flex-row md:px-0 xl:text-xl md:flex xs:hidden items-center place-content-center">
+        <div className="">
+          <Link
+            to="/"
+            className="hover:bg-blue-600  hover:py-4 hover:border-b-2 hover:transition-all ease-linear font-bold text-xl lg:mr-2 md:mr-0 lg:px-8 md:px-4"
+          >
+            Home
+          </Link>
+        </div>
+        <div className="hover:bg-blue-600 hover:py-4 hover:border-b-2 hover:transition-all ease-linear font-bold text-xl lg:mr-2 md:mr-0 lg:px-8 md:px-4 flex flex-row">
+          <Link
+            to="/cart"
+            className="flex flex-row justify-between items-center place-content-center px-2"
+          >
+            <h1>Cart :</h1>
+            <MdShoppingCart></MdShoppingCart>
+            {cartQuantity}
+          </Link>
+        </div>
       </div>
       <div
         className="md:hidden mr-4 cursor-pointer w-auto"

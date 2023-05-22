@@ -13,7 +13,7 @@ function App() {
     <>
       <Provider store={store}>
         <BrowserRouter>
-          <div className="box-border flex flex-col h-[100vh]">
+          <div className="box-border flex flex-col h-full bg-blue-50">
             <Navbar></Navbar>
             <Routes>
               <Route path="/" element={<Home />} />
