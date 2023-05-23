@@ -27,7 +27,7 @@ const Products = () => {
             <div className=""><img className="md:h-54 xs:h-48 lg:w-36 md:w-44 xs:w-36 bg-contain py-2"  src={product.image} alt={product.title}></img></div>
             <h2 className="font-bold">{(product.title).split('', 40)}</h2>
             <h3>₹{Math.ceil(product.price * 83)}</h3>
-            <button className="bg-blue-500 px-3 py-2 rounded-lg text-white font-bold hover:bg-blue-600 active:bg-blue-600" onClick={()=>handleAdd(product)}>Add to Cart</button>
+                <button className="bg-blue-500 w-full px-3 py-2 text-white font-bold hover:bg-blue-600 active:bg-blue-600" onClick={()=>handleAdd(product)}>Add to Cart</button>
           </div>
         );
       })}
